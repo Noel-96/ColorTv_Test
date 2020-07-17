@@ -19,6 +19,7 @@
 		4EC8082024C1B09900EE655A /* MapExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC8081F24C1B09900EE655A /* MapExtension.swift */; };
 		4EC8082324C1B0D100EE655A /* ControlData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC8082224C1B0D100EE655A /* ControlData.swift */; };
 		4EC8082624C1B30900EE655A /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC8082524C1B30900EE655A /* Client.swift */; };
+		4EC8082824C1B35400EE655A /* WeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC8082724C1B35400EE655A /* WeatherAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		4EC8081F24C1B09900EE655A /* MapExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapExtension.swift; sourceTree = "<group>"; };
 		4EC8082224C1B0D100EE655A /* ControlData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlData.swift; sourceTree = "<group>"; };
 		4EC8082524C1B30900EE655A /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		4EC8082724C1B35400EE655A /* WeatherAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				4EC8082524C1B30900EE655A /* Client.swift */,
+				4EC8082724C1B35400EE655A /* WeatherAPI.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				4EC8082324C1B0D100EE655A /* ControlData.swift in Sources */,
 				4EC807F024C1A9BD00EE655A /* ViewController.swift in Sources */,
 				4EC807F624C1A9BD00EE655A /* LocationWeather.xcdatamodeld in Sources */,
+				4EC8082824C1B35400EE655A /* WeatherAPI.swift in Sources */,
 				4EC807EC24C1A9BD00EE655A /* AppDelegate.swift in Sources */,
 				4EC807EE24C1A9BD00EE655A /* SceneDelegate.swift in Sources */,
 			);
