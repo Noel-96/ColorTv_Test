@@ -20,6 +20,7 @@
 		4EC8082324C1B0D100EE655A /* ControlData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC8082224C1B0D100EE655A /* ControlData.swift */; };
 		4EC8082624C1B30900EE655A /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC8082524C1B30900EE655A /* Client.swift */; };
 		4EC8082824C1B35400EE655A /* WeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC8082724C1B35400EE655A /* WeatherAPI.swift */; };
+		4EC8082B24C1B3C900EE655A /* PinMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC8082A24C1B3C900EE655A /* PinMapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		4EC8082224C1B0D100EE655A /* ControlData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlData.swift; sourceTree = "<group>"; };
 		4EC8082524C1B30900EE655A /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		4EC8082724C1B35400EE655A /* WeatherAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPI.swift; sourceTree = "<group>"; };
+		4EC8082A24C1B3C900EE655A /* PinMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinMapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		4EC807EA24C1A9BD00EE655A /* LocationWeather */ = {
 			isa = PBXGroup;
 			children = (
+				4EC8082924C1B3BF00EE655A /* Controllers */,
 				4EC8082424C1B14400EE655A /* Network */,
 				4EC8082124C1B0BB00EE655A /* Model */,
 				4EC8081E24C1B07D00EE655A /* extensions */,
@@ -165,6 +168,14 @@
 				4EC8082724C1B35400EE655A /* WeatherAPI.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		4EC8082924C1B3BF00EE655A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4EC8082A24C1B3C900EE655A /* PinMapViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,6 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EC8082B24C1B3C900EE655A /* PinMapViewController.swift in Sources */,
 				4EC8082024C1B09900EE655A /* MapExtension.swift in Sources */,
 				4EC8082624C1B30900EE655A /* Client.swift in Sources */,
 				4EC8082324C1B0D100EE655A /* ControlData.swift in Sources */,
