@@ -33,7 +33,7 @@ class ControlData {
     
     static func shared() -> ControlData {
         struct Singleton {
-            static var shared = ControlData(modelName: "Weather_Map")
+            static var shared = ControlData(modelName: "LocationWeather")
         }
         return Singleton.shared
     }
