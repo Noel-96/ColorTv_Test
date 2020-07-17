@@ -11,14 +11,13 @@ import MapKit
 import CoreData
 import CoreLocation
 
-
-class PinMapViewController: UIViewController , MKMapViewDelegate , UIGestureRecognizerDelegate, CLLocationManagerDelegate {
+class PinMapViewController: UIViewController , MKMapViewDelegate , UIGestureRecognizerDelegate, CLLocationManagerDelegate{
+    
+    let locationManager = CLLocationManager()
     
     var dataController : ControlData!
     @IBOutlet weak var mapView: MKMapView!
     var pins: [Pin] = []
-    
-    let locationManager = CLLocationManager()
     override func viewWillAppear(_ animated: Bool) {
         addpin()
         view.reloadInputViews()
@@ -29,23 +28,26 @@ class PinMapViewController: UIViewController , MKMapViewDelegate , UIGestureReco
      override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.locationManager.requestAlwaysAuthorization()
         self.locationManager.requestWhenInUseAuthorization()
 
-            if CLLocationManager.locationServicesEnabled() {
-                locationManager.delegate = self
-                locationManager.desiredAccuracy = kCLLocationAccuracyBest
-                locationManager.startUpdatingLocation()
-            }
+          if CLLocationManager.locationServicesEnabled() {
+              locationManager.delegate = self
+              locationManager.desiredAccuracy = kCLLocationAccuracyBest
+              locationManager.startUpdatingLocation()
+               locationManager.pausesLocationUpdatesAutomatically = false
+            locationManager.distanceFilter = 20.0
+            
+            
+          }
 
-            mapView.delegate = self
-            mapView.mapType = .standard
-            mapView.isZoomEnabled = true
-            mapView.isScrollEnabled = true
+          mapView.delegate = self
+          mapView.mapType = .standard
+          mapView.isZoomEnabled = true
+          mapView.isScrollEnabled = true
 
-            if let coor = mapView.userLocation.location?.coordinate{
-                mapView.setCenter(coor, animated: true)
-            }
+          if let coor = mapView.userLocation.location?.coordinate{
+              mapView.setCenter(coor, animated: true)
+          }
         
         let gesture = UILongPressGestureRecognizer(target: self, action: #selector(tappedToAddPin))
         gesture.delegate = self
@@ -60,16 +62,25 @@ class PinMapViewController: UIViewController , MKMapViewDelegate , UIGestureReco
         
     }
     
+    
+  
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let locValue:CLLocationCoordinate2D = manager.location!.coordinate
 
         mapView.mapType = MKMapType.standard
 
-        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        let span = MKCoordinateSpan(latitudeDelta: 0.3, longitudeDelta: 0.3)
         let region = MKCoordinateRegion(center: locValue, span: span)
         mapView.setRegion(region, animated: true)
 
+       let annotation = MKPointAnnotation()
+        annotation.coordinate = locValue
+        mapView.addAnnotation(annotation)
+
+        //centerMap(locValue)
     }
+    
+   
     
     @objc func tappedToAddPin(gestureReconizer : UIGestureRecognizer){
         if gestureReconizer.state == UIGestureRecognizer.State.began {
@@ -119,4 +130,3 @@ class PinMapViewController: UIViewController , MKMapViewDelegate , UIGestureReco
         return UIColor(red: r, green: g, blue: b, alpha: CGFloat(alpha))
     }
 }
-
