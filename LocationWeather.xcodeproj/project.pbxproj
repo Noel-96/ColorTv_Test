@@ -18,6 +18,7 @@
 		4EC8081124C1A9BE00EE655A /* LocationWeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC8081024C1A9BE00EE655A /* LocationWeatherUITests.swift */; };
 		4EC8082024C1B09900EE655A /* MapExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC8081F24C1B09900EE655A /* MapExtension.swift */; };
 		4EC8082324C1B0D100EE655A /* ControlData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC8082224C1B0D100EE655A /* ControlData.swift */; };
+		4EC8082624C1B30900EE655A /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC8082524C1B30900EE655A /* Client.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		4EC8081224C1A9BE00EE655A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EC8081F24C1B09900EE655A /* MapExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapExtension.swift; sourceTree = "<group>"; };
 		4EC8082224C1B0D100EE655A /* ControlData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlData.swift; sourceTree = "<group>"; };
+		4EC8082524C1B30900EE655A /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 		4EC8082424C1B14400EE655A /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				4EC8082524C1B30900EE655A /* Client.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EC8082024C1B09900EE655A /* MapExtension.swift in Sources */,
+				4EC8082624C1B30900EE655A /* Client.swift in Sources */,
 				4EC8082324C1B0D100EE655A /* ControlData.swift in Sources */,
 				4EC807F024C1A9BD00EE655A /* ViewController.swift in Sources */,
 				4EC807F624C1A9BD00EE655A /* LocationWeather.xcdatamodeld in Sources */,
